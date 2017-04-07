@@ -76,6 +76,12 @@ $(document).ready(function () {
 			state.activity = (bestest_timer.activities.filter(function (activity) { return activity.is_default; })[0] || { id: null }).id;
 			state.activities = bestest_timer.activities;
 			saveState();
+			
+			$.ajax({
+			      url:  bestest_timer.timelog_url_start,
+			      type: "GET",
+			});
+			
 		}
 	}
 
